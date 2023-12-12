@@ -1,5 +1,38 @@
 # Medkit Usefulness Predictor
 
+## Introduction
+
+The **Medkit Usefulness Predictor** is a project aimed at developing a model capable of predicting the usefulness of medical kits in various situations. This README provides an overview of the process, from dataset generation to the creation of the submission file.
+
+## Dataset Generation
+
+To kickstart the project, a dataset is generated containing various relevant information. These include fields such as ID, Distributor, Product, Duration, Destination, Sales, Commission, Gender, Age, and the target variable indicating the effectiveness of the medical kit.
+
+## Data Splitting and Saving
+
+The generated data is split into training and testing sets using the `train_test_split` function from scikit-learn. This division is crucial for evaluating the model's performance on previously unseen data. The resulting sets are saved in CSV files to enable future analysis and model training.
+
+## Preprocessing and Encoding
+
+Data preprocessing is a critical step, including encoding categorical variables using `LabelEncoder`. This process ensures that all variables are in numerical format, a requirement for many machine learning algorithms.
+
+## Model Training and Evaluation
+
+The training data is then divided into training and validation sets. A classification model, in this case, a `RandomForestClassifier`, is trained using the training data. The choice of this model is based on its effectiveness in classification problems.
+
+The model's performance is evaluated using the validation data. Metrics such as precision, recall, and F1-score are calculated through the `classification_report` function. Accuracy is also reported using the `accuracy_score` function.
+
+## Submission File Generation
+
+After training and evaluation, the model is used to make predictions on the test set. The predictions are organized into a submission file, saved in CSV format. This file contains the model's predictions associated with the corresponding IDs, providing a practical insight into the estimated usefulness of medical kits in different situations.
+
+This detailed README provides a comprehensive understanding of the workflow of the "Medkit Usefulness Predictor" project, enabling other users to comprehend and replicate the data analysis and modeling process.
+
+
+======================================================================================================================================================================================================================================================
+
+# Medkit Usefulness Predictor (Português)
+
 ## Introdução
 
 O **Medkit Usefulness Predictor** é um projeto que visa desenvolver um modelo capaz de prever a utilidade de kits médicos em diversas situações. Este README fornece uma visão geral do processo, desde a geração do conjunto de dados até a criação do arquivo de submissão.
